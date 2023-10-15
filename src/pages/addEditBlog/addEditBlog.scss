@@ -1,0 +1,63 @@
+@import "../../utils/config/mixins.scss";
+
+.blog-form input:focus {
+  border-color: #16697a !important;
+}
+
+.description-box {
+  @include border-radius(0!important);
+  height: 150px;
+  resize: none;
+  padding-top: 20px !important;
+  letter-spacing: 1px !important;
+}
+
+.btn-add {
+  background: #489FB5 !important;
+  @include border-radius(0!important);
+  color: #fff !important;
+  padding: 10px 50px !important;
+}
+
+.rti--container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: auto !important;
+    width: 100% !important;
+    @include border-radius(0!important);
+}
+
+.rti--container input{
+    flex: 1;
+    border: none;
+    outline: none;
+}
+
+.rti--container input:focus {
+    border-color: #16697A !important;   
+}
+
+
+.radio-label {
+  margin-right: 1rem; /* Adjust the spacing as desired */
+}
+
+.catg-dropdown {
+  width: 100%;
+  border-radius: 4px;
+  height: 45px;
+  color: #806a78;
+}
+
+.catg-dropdown:focus {
+  outline: none !important;
+  border-color: #16697a;
+}
+
+.trending {
+  float: left;
+  color: #806a78;
+  font-size: 18px;
+  margin: auto;
+}
