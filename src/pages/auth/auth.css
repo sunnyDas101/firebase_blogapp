@@ -1,0 +1,36 @@
+.heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.input-text-box {
+  font-size: 0.9;
+  height: 45px;
+  letter-spacing: 1px;
+}
+
+.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #f8e559;
+}
+
+.btn-sign-in {
+  background: #4287f5;
+  color: #fff;
+  padding: 10px 50px;
+}
+
+.btn-sign-in:hover {
+  background-color: #3366d9;
+}
+
+.btn-sign-up {
+  background: #c43421;
+  color: #fff;
+  padding: 10px 50px;
+}
+
+.btn-sign-up:hover {
+  background-color: #a12b18;
+}

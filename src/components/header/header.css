@@ -1,0 +1,60 @@
+.navbar .navbar-brand {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-right: 25px;
+}
+
+.navbar .navbar-brand span {
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+.navbar ul li {
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.profile-logo img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-top: 6px;
+  cursor: pointer;
+}
+
+.displayName {
+  margin-top: 10px;
+  margin-left: 8px;
+  margin-right: 12px;
+}
+
+/* ---- media-queries ---- */
+
+@media only screen and (max-width: 992px) {
+  .navbar .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  .navbar .navbar-brand span {
+    font-size: 0.5rem;
+    font-weight: normal;
+  }
+
+  .navbar ul li {
+    font-size: 0.9rem;
+  }
+
+  .profile-logo img {
+    width: 25px;
+    height: 25px;
+    margin-top: 0;
+    margin-left: 6px;
+  }
+
+  .displayName {
+    font-size: 0.9rem;
+    margin-left: 6px;
+    margin-right: 0;
+  }
+}

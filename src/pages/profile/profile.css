@@ -1,0 +1,77 @@
+.blog-heading{
+  border: 0;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.profile-img:hover img{
+  content: url('../../assets/camera-2.png');
+  width: 80%;
+  height: 80%;
+  border-radius: 0 !important;
+  transform: scale(0.7);
+  transform-origin: center center;
+}
+
+.profile-img img {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: 0 auto;
+}
+
+.user-info p {
+  padding: 5px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.btn {
+  margin-bottom: 10px;
+}
+
+#updatedDisplayName {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 45px;
+  letter-spacing: 1px;
+  padding: 10px;
+  font-size: 0.9rem;
+  outline: none;
+  border: none;
+}
+
+@media only screen and (max-width: 992px)  {
+  .user-info {
+    width: 30%;
+  }
+}

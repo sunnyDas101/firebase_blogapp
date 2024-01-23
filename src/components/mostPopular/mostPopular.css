@@ -1,0 +1,31 @@
+.most-popular-img {
+  height: 80px;
+  width: 100%;
+}
+
+.most-popular-font {
+  font-weight: 500;
+}
+
+.most-popular-font-meta {
+  font-size: 0.7rem;
+  color: #777;
+}
+
+/* ---- media-queries ---- */
+
+@media only screen and (max-width: 992px) {
+  .most-popular-img {
+    height: 70px;
+    width: 100%;
+  }
+
+  .most-popular-font {
+    font-size: 0.8rem;
+  }
+
+  .most-popular-font-meta {
+    font-size: 0.6rem;
+    color: #777;
+  }
+}

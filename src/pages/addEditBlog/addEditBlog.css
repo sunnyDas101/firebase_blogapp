@@ -1,0 +1,49 @@
+.App {
+  text-align: center;
+}
+.blog-form input:focus {
+  border-color: yellow;
+}
+
+.description-box {
+  height: 150px;
+  resize: none;
+  padding-top: 20px;
+  letter-spacing: 1px;
+}
+
+.btn-add {
+  background: #4287f5;
+  color: #fff;
+  padding: 10px 50px;
+}
+
+.btn-add:hover {
+  background-color: #3366d9 !important;
+}
+
+.react-tag-input {
+  height: 45px;
+}
+
+.react-tag-input:focus {
+  border-color: #f8e559;
+}
+
+.catg-dropdown {
+  width: 100%;
+  border-radius: 4px;
+  height: 45px;
+  color: #806a78;
+}
+
+.catg-dropdown:focus {
+  outline: none;
+  border-color: #f8e559;
+}
+
+.trending {
+  float: left;
+  font-size: 1.1rem;
+  margin: auto;
+}

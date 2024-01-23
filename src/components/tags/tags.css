@@ -1,0 +1,26 @@
+.tag {
+  background: #544e66;
+  padding: 10px 15px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  margin-right: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tag:hover,
+.tag:focus {
+  background: #3d3850;
+  text-decoration: none;
+}
+
+/* ---- media-queries ---- */
+
+@media only screen and (max-width: 992px) {
+  .tag {
+    padding: 5px 10px;
+  }
+}
