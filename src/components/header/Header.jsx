@@ -1,11 +1,12 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./header.css";
 
 const Header = ({ active, setActive, user, handleLogout }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigate = useNavigate()
+  const loaction = useLocation()
 
   const userId = user?.uid;
 
@@ -24,6 +25,10 @@ const Header = ({ active, setActive, user, handleLogout }) => {
     handleLogout()
     setIsMenuOpen(false)
   }
+
+  useEffect(()=> {
+    setIsMenuOpen(false)
+  }, [loaction.pathname])
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark">
