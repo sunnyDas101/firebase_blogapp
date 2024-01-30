@@ -81,7 +81,7 @@ const useFirestore = (collectionName) => {
         console.log(error);
       }
     );
-    
+
     return () => {
       unsub();
       getTrendingBlogs();

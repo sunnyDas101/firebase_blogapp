@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Route, Routes, useNavigate, Navigate } from "react-router-dom";
 import Home from "./pages/home/Home";
@@ -13,7 +13,9 @@ import { auth } from "./firebase/firebaseConfig";
 import { signOut } from "firebase/auth";
 import Modal from "./components/modal/Modal";
 import Profile from "./pages/profile/Profile";
+import VerifyEmail from "./components/verifyEmail/VerifyEmail";
 import "./App.css";
+
 
 const App = () => {
   const [active, setActive] = useState("home");
@@ -25,7 +27,13 @@ const App = () => {
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {
-        setUser(authUser);
+        if (authUser.emailVerified) {
+          setUser(authUser);
+        } else {
+          toast.info("Please verify your email before logging in.");
+          setUser(null);
+          setActive("auth"); 
+        }
       } else {
         setUser(null);
       }
@@ -95,8 +103,12 @@ const App = () => {
         />
         <Route path="/about" element={<About />} />
         <Route path="/auth" element={<Auth setActive={setActive} />} />
-        <Route path="/profile" element={<Profile user={user} setActive={setActive} />} />
+        <Route
+          path="/profile"
+          element={<Profile user={user} setActive={setActive} />}
+        />
         <Route path="*" element={<NotFound />} />
+        <Route path="/verify-email" element={<VerifyEmail />} />
       </Routes>
     </div>
   );

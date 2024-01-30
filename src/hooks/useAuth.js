@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {
   createUserWithEmailAndPassword,
+  sendEmailVerification,
   signInWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
@@ -73,12 +74,19 @@ const useAuth = ({ setActive }) => {
             password
           );
 
+          // Send email verification
+          await sendEmailVerification(user);
+
           await updateProfile(user, {
             displayName: `${firstName} ${lastName}`,
             photoURL: profileImage,
           });
+
+          // Display a message to the user about email verification
+          toast.info("Verification email sent. Please check your inbox.");
+
           setActive("home");
-          navigate("/");
+          navigate("/verify-email");
         } catch (error) {
           console.error("Error registering user:", error);
           if (error.code === "auth/email-already-in-use") {
